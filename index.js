@@ -10,13 +10,13 @@ function searchRepositories(){
     const repoList = template(data.items)
     dontBreak = data.items
     document.getElementById("results").innerHTML = repoList */
-    function item(obj){
+    $("#results").html(data.items.map(function(obj){
       return `<li>
-      <h3><a href="${html_url}">${name}</a></h3>
-      <p>${description}</p>
-      <p><a href="${owner.html_url}">${owner.login}</a></p>
-      <p><img src="${owner.avatar_url}" alt="User Avatar" height="50" width="50"></p>
-    </li>`};
-    $("#results").html(data.items.map(item(obj).join("")))
+      <h3><a href="${obj.html_url}">${obj.name}</a></h3>
+      <p>${obj.description}</p>
+      <p><a href="${obj.owner.html_url}">${obj.owner.login}</a></p>
+      <p><img src="${obj.owner.avatar_url}" alt="User Avatar" height="50" width="50"></p>
+    </li>`
+    }.join("")))
   })
 }
