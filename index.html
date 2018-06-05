@@ -37,17 +37,5 @@
     <script src="jquery-3.1.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.0/handlebars.js"></script>
     <script type="text/javascript" src="index.js"></script>
-    <script type="text/x-handlebars-template" id="repo-template">
-      <ul>
-        {{#each this}}
-        <li>
-          <h3><a href="{{html_url}}">{{name}}</a></h3>
-          <p>{{description}}</p>
-          <p><a href="{{owner.html_url}}">{{owner.login}}</a></p>
-          <p><img src="{{owner.avatar_url}}" alt="User Avatar" height="50" width="50"></p>
-        </li>
-        {{/each}}
-      </ul>
-    </script>
   </body>
 </html>
