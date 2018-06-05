@@ -7,7 +7,6 @@ function searchRepositories(){
   $.get("https://api.github.com/search/repositories?q=" + searchTerms, function(data){
     console.log(data)
     const results = JSON.parse(data)
-    debugger;
     const src = document.getElementById("repo-template").innerHTML
     const template = Handlebars.compile(src)
     const repoList = template(results)
