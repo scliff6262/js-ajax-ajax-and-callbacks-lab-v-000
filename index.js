@@ -2,9 +2,14 @@ $(document).ready(function (){
 
 });
 
+function displayError(){
+  $("#errors").html("<p>I'm sorry, there's been an error. Please try again.</p>")
+}
+
 function searchRepositories(){
   const searchTerms = document.getElementById("searchTerms").value
-  $.get("https://api.github.com/search/repositories?q=" + searchTerms).done(function(data){
+  $.get("https://api.github.com/search/repositories?q=" + searchTerms)
+  .done(function(data){
     $("#results").html(data.items.map(function(obj){
       return `<li>
       <h3><a href="${obj.html_url}">${obj.name}</a></h3>
@@ -13,5 +18,8 @@ function searchRepositories(){
       <p><img src="${obj.owner.avatar_url}" alt="User Avatar" height="50" width="50"></p>
     </li>`
     }))
+  })
+  .fail(function(error){
+
   })
 }
