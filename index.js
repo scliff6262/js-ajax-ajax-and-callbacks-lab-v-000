@@ -20,6 +20,6 @@ function searchRepositories(){
     }))
   })
   .fail(function(error){
-
+    displayError()
   })
 }
