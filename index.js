@@ -10,13 +10,16 @@ function showCommits(el){
   const user = el.dataset.user
   const name = el.dataset.repo
   $.get(`https://api.github.com/repos/${user}/${name}/commits`)
+  .done(function(data){
+    console.log(data)
+    $("#details").html(data)
+  })
 }
 
 function searchRepositories(){
   const searchTerms = document.getElementById("searchTerms").value
   $.get("https://api.github.com/search/repositories?q=" + searchTerms)
   .done(function(data){
-    console.log(data.items[0])
     $("#results").html(data.items.map(function(obj){
       return `<li>
       <h3><a href="${obj.html_url}">${obj.name}</a></h3>
