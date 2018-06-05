@@ -6,10 +6,15 @@ function displayError(){
   $("#errors").html("<p>I'm sorry, there's been an error. Please try again.</p>")
 }
 
+function showCommits(){
+  $.get("")
+}
+
 function searchRepositories(){
   const searchTerms = document.getElementById("searchTerms").value
   $.get("https://api.github.com/search/repositories?q=" + searchTerms)
   .done(function(data){
+    console.log(data.items[0])
     $("#results").html(data.items.map(function(obj){
       return `<li>
       <h3><a href="${obj.html_url}">${obj.name}</a></h3>
