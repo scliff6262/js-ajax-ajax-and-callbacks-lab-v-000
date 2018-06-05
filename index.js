@@ -17,7 +17,7 @@ function showCommits(el){
         <p>${obj.sha}</p>
         <p>${obj.commit.author.name}</p>
         <p>${obj.author.login}</p>
-        <img src="https://avatars1.githubusercontent.com/u/24859176?v=4" alt="Author's Avatar">
+        <img src="https://avatars1.githubusercontent.com/u/24859176?v=4" alt="Author's Avatar" height="50" width="50">
       </li>`
     }))
   })
