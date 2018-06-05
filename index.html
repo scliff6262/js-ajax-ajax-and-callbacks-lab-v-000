@@ -40,9 +40,9 @@
     <script type="text/x-handlebars-template" id="repo-template">
       <ul>
         {{#each this}}
-        <h4><a href={{html_url}}>{{name}}</a></h4>
-        <p><a href={{owner.html_url}}>{{owner.login}}</a></p>
-        <p><img src={{owner.avatar_url}} alt="User Avatar"></p>
+        <h4><a href="{{html_url}}">{{name}}</a></h4>
+        <p><a href="{{owner.html_url}}">{{owner.login}}</a></p>
+        <p><img src="{{owner.avatar_url}}" alt="User Avatar"></p>
         {{/each}}
       </ul>
     </script>
