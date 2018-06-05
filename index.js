@@ -10,6 +10,6 @@ function searchRepositories(){
     const src = document.getElementById("repo-template").innerHTML
     const template = Handlebars.compile(src)
     const repoList = template(results)
-    document.getElementById("results")
+    document.getElementById("results").innerHTML = repoList
   }).
 }
