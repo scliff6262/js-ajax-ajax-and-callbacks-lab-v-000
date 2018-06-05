@@ -16,6 +16,7 @@ function searchRepositories(){
       <p>${obj.description}</p>
       <p><a href="${obj.owner.html_url}">${obj.owner.login}</a></p>
       <p><img src="${obj.owner.avatar_url}" alt="User Avatar" height="50" width="50"></p>
+      <p><a href="#" onclick="showCommits()">Show Commits</a>
     </li>`
     }))
   })
