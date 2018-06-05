@@ -10,5 +10,6 @@ function searchRepositories(){
     const repoList = template(data.items)
     dontBreak = data.items
     document.getElementById("results").innerHTML = repoList */
+    $("#results").html(data.items)
   })
 }
