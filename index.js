@@ -7,6 +7,8 @@ function displayError(){
 }
 
 function showCommits(el){
+  const user = el.dataset.user
+  const name = el.dataset.repo
   $.get(`https://api.github.com/repos/${user}/${name}/commits`)
 }
 
