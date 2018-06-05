@@ -17,6 +17,6 @@ function searchRepositories(){
       <p><a href="${obj.owner.html_url}">${obj.owner.login}</a></p>
       <p><img src="${obj.owner.avatar_url}" alt="User Avatar" height="50" width="50"></p>
     </li>`
-    }.join("")))
+    }))
   })
 }
