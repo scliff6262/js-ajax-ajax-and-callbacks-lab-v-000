@@ -13,12 +13,12 @@ function showCommits(el){
   .done(function(data){
     console.log(data)
     $("#details").html(data.map(function(obj){
-      return <li>
+      return `<li>
         <p>${obj.sha}</p>
         <p>${obj.commit.author.name}</p>
         <p>${obj.author.login}</p>
         <img src="https://avatars1.githubusercontent.com/u/24859176?v=4" alt="Author's Avatar">
-      </li>
+      </li>`
     }))
   })
 }
