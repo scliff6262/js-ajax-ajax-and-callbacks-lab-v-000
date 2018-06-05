@@ -11,5 +11,5 @@ function searchRepositories(){
     const template = Handlebars.compile(src)
     const repoList = template(results)
     document.getElementById("results").innerHTML = repoList
-  }).
+  })
 }
