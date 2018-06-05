@@ -8,7 +8,7 @@ function searchRepositories(){
     const src = document.getElementById("repo-template").innerHTML
     const template = Handlebars.compile(src)
     const repoList = template(data.items)
-    console.log(data.items)
+    const results = data.items
     document.getElementById("results").innerHTML = repoList
   })
 }
