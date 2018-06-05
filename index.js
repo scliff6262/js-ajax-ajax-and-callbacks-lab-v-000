@@ -7,5 +7,7 @@ function searchRepositories(){
   $.get("https://api.github.com/search/repositories?q=" + searchTerms, function(data){
     console.log(data)
     const src = documents.getElementById("repo-template").innerHTML
+    const template = Handlebars.compile(src)
+    const repoList = template(data)
   })
 }
