@@ -9,5 +9,6 @@ function searchRepositories(){
     const results = JSON.parse(data)
     const src = document.getElementById("repo-template").innerHTML
     const template = Handlebars.compile(src)
+    const repoList = template(results)
   }).
 }
