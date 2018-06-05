@@ -10,7 +10,7 @@ function searchRepositories(){
     const repoList = template(data.items)
     dontBreak = data.items
     document.getElementById("results").innerHTML = repoList */
-    function item(obj){`<li>
+    function item(obj){return `<li>
       <h3><a href="${html_url}">${name}</a></h3>
       <p>${description}</p>
       <p><a href="${owner.html_url}">${owner.login}</a></p>
